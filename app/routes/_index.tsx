@@ -5,7 +5,7 @@ import { json } from "@remix-run/node";
 export const meta: MetaFunction = () => {
   return [
     { title: "Harry Potter Characters" },
-    { name: "description", content: "Welcome to Hogwarts" },
+    { name: "description", content: "Welcome to Hogwarts!" },
   ];
 };
 
@@ -28,7 +28,7 @@ export default function Index() {
 
   return (
     <div className="flex justify-center items-center w-full max-w-4xl min-h-screen mx-auto">
-      <ul className="grid grid-cols-4 gap-4 p-4 w-full ">
+      <ul className="grid grid-cols-4 gap-4 p-4 w-full">
         {character.map((char: any) => (
           <li
             key={char.id}
