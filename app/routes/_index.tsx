@@ -13,6 +13,11 @@ export const loader = async () => {
   const res = await fetch(
     "https://harry-potter-api-en.onrender.com/characters"
   );
+  if (!res) {
+    throw new Response("Not Found", {
+      status: 404,
+    });
+  }
 
   const character = await res.json();
   return json(character);
