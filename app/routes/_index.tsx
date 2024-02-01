@@ -21,27 +21,6 @@ export const loader = async () => {
 export default function Index() {
   const character = useLoaderData<typeof loader>();
 
-  const houseColor = () => {
-    character.filter((char: any) => {
-      if (char.hogwartsHouse === "Gryffindor") {
-        return "bg-red-900";
-      } else if (char.hogwartsHouse === "Slytherin") {
-        return "bg-emerald-900";
-      } else if (char.hogwartsHouse === "Ravenclaw") {
-        return "bg-blue-900";
-      } else {
-        return "bg-yellow-700";
-      }
-    });
-  };
-
-  const houseColors = {
-    Gryffindor: "bg-red-900",
-    Slytherin: "bg-emerald-900",
-    Ravenclaw: "bg-blue-900",
-    Hufflepuff: "bg-yellow-700",
-  };
-
   return (
     <div className="flex justify-center items-center w-full max-w-4xl min-h-screen mx-auto">
       <ul className="grid grid-cols-4 gap-4 p-4 w-full ">
